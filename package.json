@@ -1,9 +1,11 @@
 {
+  "name": "oasis",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.4",
@@ -28,6 +30,7 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0"
   },
+  "packageManager": "npm@8.19.2",
   "engines": {
     "node": ">=20.12.0"
   }
