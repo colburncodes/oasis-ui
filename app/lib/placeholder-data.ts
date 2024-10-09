@@ -1,4 +1,10 @@
+import { v4 as uuidv4 } from 'uuid';
 // This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
+// Install the uuid package by running the following command:
+// npm install uuid
+
+// If you are using TypeScript, you may also need to install the type definitions:
+// npm install --save-dev @types/uuid
 // https://nextjs.org/learn/dashboard-app/fetching-data
 const users = [
   {
@@ -50,78 +56,91 @@ const customers = [
 
 const invoices = [
   {
+    id: uuidv4(),
     customer_id: customers[0].id,
     amount: 15795,
     status: 'pending',
     date: '2022-12-06',
   },
   {
+    id: uuidv4(),
     customer_id: customers[1].id,
     amount: 20348,
     status: 'pending',
     date: '2022-11-14',
   },
   {
+    id: uuidv4(),
     customer_id: customers[4].id,
     amount: 3040,
     status: 'paid',
     date: '2022-10-29',
   },
   {
+    id: uuidv4(),
     customer_id: customers[3].id,
     amount: 44800,
     status: 'paid',
     date: '2023-09-10',
   },
   {
+    id: uuidv4(),
     customer_id: customers[5].id,
     amount: 34577,
     status: 'pending',
     date: '2023-08-05',
   },
   {
+    id: uuidv4(),
     customer_id: customers[2].id,
     amount: 54246,
     status: 'pending',
     date: '2023-07-16',
   },
   {
+    id: uuidv4(),
     customer_id: customers[0].id,
     amount: 666,
     status: 'pending',
     date: '2023-06-27',
   },
   {
+    id: uuidv4(),
     customer_id: customers[3].id,
     amount: 32545,
     status: 'paid',
     date: '2023-06-09',
   },
   {
+    id: uuidv4(),
     customer_id: customers[4].id,
     amount: 1250,
     status: 'paid',
     date: '2023-06-17',
   },
   {
+    id: uuidv4(),
     customer_id: customers[5].id,
     amount: 8546,
     status: 'paid',
     date: '2023-06-07',
   },
   {
+    id: uuidv4(),
     customer_id: customers[1].id,
     amount: 500,
     status: 'paid',
     date: '2023-08-19',
   },
   {
+    id: uuidv4(),
     customer_id: customers[5].id,
     amount: 8945,
     status: 'paid',
     date: '2023-06-03',
   },
   {
+    id: uuidv4(),
     customer_id: customers[2].id,
     amount: 1000,
     status: 'paid',
