@@ -30,7 +30,7 @@ async function seedInvoices() {
   await query(`
     CREATE TABLE IF NOT EXISTS invoices (
       id UUID PRIMARY KEY,
-      customer_id UUID NOT NULL,
+      customer_id UUID References customers(id) NOT NULL,
       amount INT NOT NULL,
       status VARCHAR(255) NOT NULL,
       date DATE NOT NULL
@@ -95,9 +95,9 @@ async function seedStores() {
       name VARCHAR(255) NOT NULL,
       address VARCHAR(255) NOT NULL,
       status VARCHAR(50) NOT NULL,
-      route_id UUID,
+      route_id UUID REFERENCES routes(id),
       last_delivery_date DATE,
-      next_delivery_date DATE
+      next_delivery_date DATE,
     );
   `, []);
 
@@ -119,7 +119,7 @@ async function seedRoutes() {
       name VARCHAR(255) NOT NULL,
       description TEXT,
       status VARCHAR(50) NOT NULL,
-      driver_id UUID,
+      driver_id UUID REFERENCES drivers(id),
       total_stores INT DEFAULT 0,
       total_active_stores INT DEFAULT 0,
       last_update_date DATE
